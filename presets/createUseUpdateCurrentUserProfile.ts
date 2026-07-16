@@ -10,7 +10,7 @@ export const createUseUpdateCurrentUserProfile = withUseMutationDefaults<typeof 
 
     return {
         onMutate(variables, context) {
-            toast.loading("保存个人资料中...", { id: key, duration: Infinity })
+            toast.loading("保存个人资料中...", { id: key })
         },
         onSuccess(data, variables, onMutateResult, context) {
             context.client.invalidateQueries({ queryKey: ["query-user"] })

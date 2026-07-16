@@ -10,7 +10,7 @@ export const createUseDeleteUser = withUseMutationDefaults<typeof deleteUser>(()
 
     return {
         onMutate(variables, context) {
-            toast.loading("删除用户中...", { id: key, duration: Infinity })
+            toast.loading("删除用户中...", { id: key })
         },
         onSuccess(data, variables, onMutateResult, context) {
             context.client.invalidateQueries({ queryKey: ["query-user"] })

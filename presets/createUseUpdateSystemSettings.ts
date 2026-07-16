@@ -10,7 +10,7 @@ export const createUseUpdateSystemSettings = withUseMutationDefaults<typeof upda
 
     return {
         onMutate(variables, context) {
-            toast.loading("保存系统设置中...", { id: key, duration: Infinity })
+            toast.loading("保存系统设置中...", { id: key })
         },
         onSuccess(data, variables, onMutateResult, context) {
             context.client.invalidateQueries({ queryKey: ["query-system-settings"] })

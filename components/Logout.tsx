@@ -22,7 +22,7 @@ export const Logout: FC<LogoutProps> = ({ children = "注销", disabled, onClick
         if (isPending) return
 
         setIsPending(true)
-        toast.loading("注销中...", { id: key, duration: Infinity })
+        toast.loading("注销中...", { id: key })
 
         try {
             const response = await authClient.signOut({})

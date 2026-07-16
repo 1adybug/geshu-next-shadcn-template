@@ -10,7 +10,7 @@ export const createUseCreateFirstUser = withUseMutationDefaults<typeof createFir
 
     return {
         onMutate(variables, context) {
-            toast.loading("初始化中...", { id: key, duration: Infinity })
+            toast.loading("初始化中...", { id: key })
         },
         onSuccess(data, variables, onMutateResult, context) {
             toast.success("初始化成功", { id: key })

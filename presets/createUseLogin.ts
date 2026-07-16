@@ -10,7 +10,7 @@ export const createUseLogin = withUseMutationDefaults<typeof login>(() => {
 
     return {
         onMutate(variables, context) {
-            toast.loading("登录中...", { id: key, duration: Infinity })
+            toast.loading("登录中...", { id: key })
         },
         onSuccess(data, variables, onMutateResult, context) {
             toast.success("登录成功", { id: key })

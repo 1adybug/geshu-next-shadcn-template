@@ -116,7 +116,7 @@ const Page: FC = () => {
         }
 
         setIsOAuthLoginPending(true)
-        toast.loading("正在跳转账号平台...", { id: key, duration: Infinity })
+        toast.loading("正在跳转账号平台...", { id: key })
 
         try {
             const response = await authClient.signIn.oauth2({

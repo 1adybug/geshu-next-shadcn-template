@@ -146,3 +146,32 @@ td[data-slot="table-cell"]:empty::before {
     color: var(--muted-foreground);
     content: "-";
 }
+
+.toaster[data-sonner-toaster] [data-sonner-toast] {
+    width: max-content;
+    max-width: min(var(--width), calc(100vw - var(--offset-left) - var(--offset-right)));
+}
+
+.toaster[data-sonner-toaster] [data-sonner-toast][data-x-position="center"] {
+    right: auto;
+    left: 50%;
+    translate: -50% 0;
+}
+
+@media (max-width: 600px) {
+    .toaster[data-sonner-toaster] [data-sonner-toast] {
+        max-width: calc(100vw - var(--mobile-offset-left) - var(--mobile-offset-right));
+    }
+
+    .toaster[data-sonner-toaster] [data-sonner-toast][data-x-position="left"] {
+        right: auto;
+    }
+
+    .toaster[data-sonner-toaster] [data-sonner-toast][data-x-position="center"] {
+        left: calc((100vw - var(--mobile-offset-left) - var(--mobile-offset-right)) / 2);
+    }
+
+    .toaster[data-sonner-toaster] [data-sonner-toast][data-x-position="right"] {
+        left: auto;
+    }
+}
