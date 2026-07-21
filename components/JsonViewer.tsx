@@ -29,7 +29,7 @@ export const JsonViewer: FC<JsonViewerProps> = ({ className, style, ...rest }) =
 
     return (
         <JsonView
-            className={clsx("font-sans", className)}
+            className={clsx("!font-['Noto_Sans_SC_Variable']", className)}
             style={{ ...(resolvedTheme === "dark" ? darkTheme : lightTheme), ...style }}
             displayDataTypes={false}
             {...rest}
